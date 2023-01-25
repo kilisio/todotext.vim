@@ -21,20 +21,20 @@ syntax match Note    '[Nn][Oo][Tt][Ee]:[^[:blank:]]\+'          contains=None
 syntax match Project '\(^\|\W\)+[^[:blank:]]\+'     contains=NONE
 syntax match Question '[^[:blank:]]\+?'             contains=NONE
 syntax match Update  '[Uu][Pp][Dd]:\d\{2,4\}-\d\{2\}-\d\{2\}'
-syntax match PrioA   '^(A)'                       contains=NONE
+syntax match PrioA   '^(A)'                       contains=Date,Project,Contex,Done,Due,Update,Question
 syntax match PrioB   '^(B)'                       contains=Date,Project,Contex,Done,Due,Update,Question
 syntax match PrioC   '^(C)'                       contains=Date,Project,Contex,Done,Due,Update,Question
 
 " Other priority colours might be defined by the user
 hi default link PrioA   Red3
 hi default link PrioB   DarkOrange
-hi default link PrioC   Green3
-hi default link Context Green3
+hi default link PrioC   Orange4
+hi default link Context Cyan3
 hi default link Date    PreProc
 hi default link Done    Comment
 hi default link Due     Red3
 hi default link Note    DarkBlue
-hi default link Project DarkOrange
+hi default link Project DarkMagenta
 hi default link Question    DarkOrange
 hi default link Update  DarkMagenta
 
